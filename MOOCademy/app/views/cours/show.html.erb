@@ -1,0 +1,27 @@
+<h1>Le cour : <%= @moo.classes %></h1>
+
+<p>La liste des leçons du cour :</p>
+
+<% @cour.each do |cour| %>
+
+	<h2><%= cour.lessons %></h2>
+
+	<p><%= cour.content %></p>
+
+	<a href="<%= cour_path(cour.id) %>" data-method="DELETE" >Supprimer</a>
+
+<% end %>
+
+<p>--------------------</p>
+
+<p>
+
+	<a href="<%= new_cour_path(@moo.id) %>" >Créer une leçon</a>
+
+</p>
+
+<p>
+
+	<a href="<%= cours_path %>" >revenir aux cours</a>
+
+</p>

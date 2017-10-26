@@ -1,0 +1,21 @@
+<h1>Les Cours</h1>
+
+<p>La liste des cours :</p>
+	
+<% @moo.each do |moo| %>
+
+	<h2><%= moo.classes %></h2>
+
+	<p><%= moo.description %></p>
+
+	<a href="<%= cour_path(moo.id) %>" >Lire la suite</a>
+
+	<a href="<%= edit_moo_path(moo.id) %>" >Modifier</a>
+
+<% end %>
+
+<p>
+
+	<a href="<%= moos_path %>" >Acceuil</a>
+
+</p>

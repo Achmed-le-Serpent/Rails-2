@@ -1,0 +1,27 @@
+<h1>Créer une leçon</h1>
+
+<%= form_for @cour do |f| %>
+
+   <div>
+
+   	<label>Titre de la leçon</label>
+
+   	<%= f.text_field :lessons %>
+
+   </div>
+
+   <div>
+
+   	<label>La leçon</label>
+
+   	<%= f.text_area :content %>
+
+   </div>
+
+   <div>
+
+   	<button type="submit" >Créer la leçon</button>
+
+   </div>
+
+ <% end %>
